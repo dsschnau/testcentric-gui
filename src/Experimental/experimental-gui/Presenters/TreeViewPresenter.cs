@@ -102,7 +102,7 @@ namespace TestCentric.Gui.Presenters
             };
 
             // View context commands
-            _view.Tree.ContextMenu.Popup += delegate
+            _view.Tree.ContextMenuStrip.Opening += delegate
             {
                 bool checkedRunAvailable = _view.Tree.CheckBoxes && _view.Tree.CheckedNodes.Count > 0;
                 _view.RunCheckedCommand.Visible = checkedRunAvailable;

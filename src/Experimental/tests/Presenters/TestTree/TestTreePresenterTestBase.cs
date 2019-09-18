@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Copyright (c) 2016 Charlie Poole
 //
 // Permission is hereby granted, free of charge, to any person obtaining
@@ -38,6 +38,7 @@ namespace TestCentric.Gui.Presenters.TestTree
         public void CreatePresenter()
         {
             _view = Substitute.For<ITestTreeView>();
+            _view.Tree.ContextMenuStrip.Returns(new System.Windows.Forms.ContextMenuStrip());
             _model = Substitute.For<ITestModel>();
             _model.Services.UserSettings.Returns(new NUnit.TestUtilities.Fakes.UserSettings());
 
